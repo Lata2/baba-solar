@@ -1,0 +1,62 @@
+{
+  "name": "baba-solars",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "vite --mode server",
+    "build": "tsc --noEmit && vite build && node scripts/spa-shell.mjs",
+    "build:server": "tsc --noEmit && vite build --mode server && node scripts/spa-shell.mjs",
+    "build:ssg": "tsc --noEmit && vite build && vite build --ssr src/entry-prerender.tsx --outDir dist-ssr --logLevel warn && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "server": "tsx server/index.ts",
+    "server:watch": "tsx watch server/index.ts",
+    "server:keygen": "tsx server/cli.ts keygen",
+    "server:create-user": "tsx server/cli.ts create-user",
+    "agent": "node agent/sync-agent.mjs",
+    "start": "npm run build:server && npm run server",
+    "typecheck": "tsc --noEmit && tsc -p server/tsconfig.json",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:server": "vitest run tests/server",
+    "test:e2e": "node tests/e2e.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/figtree": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
+    "@tanstack/react-query": "^5.104.3",
+    "exceljs": "^4.4.0",
+    "express": "^5.3.0",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.9",
+    "lucide-react": "^1.59.0",
+    "motion": "^14.3.0",
+    "multer": "^2.5.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^8.4.0",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/express": "^5.0.6",
+    "@types/multer": "^2.3.0",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "beasties": "^0.5.5",
+    "playwright": "^1.64.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  }
+}

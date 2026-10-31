@@ -1,0 +1,83 @@
+import type { Service } from '@/types'
+
+export const seedServices: Service[] = [
+  {
+    id: 'svc-residential', slug: 'residential-installation', title: 'Home rooftop installation', group: 'installation', icon: 'home',
+    summary: 'On-grid systems from 1 to 10 kW, sized to your bill and roof.',
+    description: 'We survey your roof, check shading and load, recommend a size, install panels and inverter, and file your net-meter and subsidy applications.',
+    includes: ['Free site survey', 'Shadow and structure check', 'Installation in 2–3 days', 'Net metering with CSPDCL', 'PM Surya Ghar subsidy filing'],
+    startingPrice: 'From ₹60,000 per kW range', status: 'published', order: 1,
+  },
+  {
+    id: 'svc-commercial', slug: 'commercial-installation', title: 'Commercial and industrial solar', group: 'installation', icon: 'factory',
+    summary: 'Systems for shops, schools, hospitals and factories from 10 kW up.',
+    description: 'Three-phase systems with structural load checks, string design and remote monitoring, planned around your working hours so business keeps running.',
+    includes: ['Load and tariff analysis', 'Structural assessment', 'Three-phase design', 'Remote monitoring', 'Depreciation guidance'],
+    startingPrice: 'Custom quote', status: 'published', order: 2,
+  },
+  {
+    id: 'svc-hybrid', slug: 'hybrid-offgrid', title: 'Hybrid and battery backup', group: 'installation', icon: 'battery',
+    summary: 'Keep the lights and fans running during power cuts.',
+    description: 'Hybrid inverters with lithium batteries for homes and shops that face frequent outages, or off-grid systems for farmhouses.',
+    includes: ['Backup load planning', 'Lithium or tubular battery options', 'Automatic changeover', 'Battery health checks'],
+    startingPrice: 'From ₹2.4 lakh (3 kW)', status: 'published', order: 3,
+  },
+  {
+    id: 'svc-drone-cleaning', slug: 'drone-solar-panel-cleaning', title: 'Drone solar panel cleaning', group: 'maintenance', icon: 'drone',
+    highlight: 'New',
+    summary: 'Drone-assisted cleaning for large, high or hard-to-reach solar arrays.',
+    description: 'For big rooftops, sheds, tall buildings and ground-mounted plants where manual cleaning is slow or risky. The drone reaches every row, and we share before/after photos and generation readings.',
+    includes: ['Drone-assisted wash for hard-to-reach arrays', 'Aerial photos of every panel row', 'Less foot traffic on panels', 'Before/after generation reading'],
+    startingPrice: 'Quote after site check', status: 'published', order: 4,
+  },
+  {
+    id: 'svc-six-month-care', slug: 'six-month-care-plan', title: '6-month free care plan', group: 'maintenance', icon: 'calendar',
+    highlight: 'Free for 6 months',
+    summary: 'Free panel cleaning for the first 6 months on every new installation.',
+    description: 'Every new Baba Solars installation includes six months of free panel cleaning, performance checks and after-sales support, so your system starts at full output.',
+    includes: ['Free panel cleaning for 6 months', 'Performance check', 'Prompt after-sales support', 'Reminder before the plan ends'],
+    startingPrice: 'Free with new installation', status: 'published', order: 5,
+  },
+  {
+    id: 'svc-cleaning', slug: 'panel-cleaning', title: 'Panel cleaning', group: 'maintenance', icon: 'droplets',
+    summary: 'Dust can cut generation by 15–25%. Regular washing brings it back.',
+    description: 'Soft brushes and low-TDS water, no harsh chemicals or pressure jets that void warranties. We record generation before and after.',
+    includes: ['Soft-brush wash', 'Low-TDS water', 'Bird-dropping removal', 'Before/after readings'],
+    startingPrice: 'From ₹499 per visit', status: 'published', order: 6,
+  },
+  {
+    id: 'svc-amc', slug: 'annual-maintenance', title: 'Annual maintenance (AMC)', group: 'maintenance', icon: 'clipboard',
+    summary: 'Scheduled cleaning and checks so your system keeps producing.',
+    description: 'A yearly plan covering cleaning, electrical tests, inverter checks and priority repair visits, with a short report after each visit.',
+    includes: ['Scheduled cleanings', 'Electrical health checks', 'Inverter log review', 'Priority repair visits'],
+    startingPrice: 'From ₹2,999 per year', status: 'published', order: 7,
+  },
+  {
+    id: 'svc-inspection', slug: 'inspection', title: 'Inspection and health check', group: 'maintenance', icon: 'gauge',
+    summary: 'Find out why generation dropped, or check a system before you buy a house.',
+    description: 'Thermal imaging for hot spots, IV-curve and insulation tests, earthing resistance and inverter logs, with a written report.',
+    includes: ['Thermal hot-spot scan', 'String voltage and current test', 'Earthing resistance test', 'Written report'],
+    startingPrice: 'From ₹1,499 per visit', status: 'published', order: 8,
+  },
+  {
+    id: 'svc-repair', slug: 'repair', title: 'Repair and inverter service', group: 'support', icon: 'wrench',
+    summary: 'Inverter errors, tripping, damaged cables or broken panels.',
+    description: 'We repair systems installed by any company, replace faulty parts, and help with manufacturer warranty claims.',
+    includes: ['Inverter fault diagnosis', 'Cable and connector replacement', 'Panel replacement', 'Warranty claim support'],
+    startingPrice: 'Visit from ₹699', status: 'published', order: 9,
+  },
+  {
+    id: 'svc-subsidy', slug: 'subsidy-net-metering', title: 'Subsidy and net metering help', group: 'support', icon: 'file',
+    summary: 'We handle the PM Surya Ghar portal and DISCOM paperwork.',
+    description: 'Registration, feasibility approval, net-meter installation and subsidy claim, tracked until the amount reaches your bank account.',
+    includes: ['Portal registration', 'Feasibility approval', 'Net-meter coordination', 'Subsidy claim tracking'],
+    startingPrice: 'Included with installation', status: 'published', order: 10,
+  },
+  {
+    id: 'svc-shift', slug: 'relocation', title: 'System relocation', group: 'support', icon: 'plug',
+    summary: 'Moving house or rebuilding the roof? We dismantle and reinstall.',
+    description: 'Careful removal, safe storage and reinstallation with fresh wiring and a full test.',
+    includes: ['Dismantling', 'Safe transport', 'Reinstallation', 'Commissioning test'],
+    startingPrice: 'Quote after survey', status: 'draft', order: 11,
+  },
+]

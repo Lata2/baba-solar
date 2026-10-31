@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+*.log
+.DS_Store
+dist-ssr
+tests/screenshots
+server/.env
+server-data
+agent/agent.env
+agent/.agent-state.json
