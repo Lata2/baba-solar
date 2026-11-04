@@ -41,7 +41,7 @@
     "vitest": "^5.0.5"
   },
   "engines": {
-    "node": ">=20.19"
+    "node": "24.x"
   },
   "overrides": {
     "uuid": "^11.1.1"
